@@ -9,6 +9,6 @@ The project is split into two main guides:
 
 📁 Project Structure
 
-  - database_creation/ : Instructions for setting up the PostgreSQL database.
+**[databese_creation](./database_creation/):**   Instructions for setting up the PostgreSQL database.
 
-  - app/ : Source code and instructions for the FastAPI + React application.
+**[app](./app):**   Source code and instructions for the FastAPI + React application.
