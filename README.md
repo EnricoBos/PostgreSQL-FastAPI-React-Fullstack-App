@@ -7,7 +7,7 @@ The project is split into two main guides:
 
  -  App: Guide to set up and run the full-stack application that interacts with the database. It includes both backend logic (FastAPI) and frontend components (React).
 
-📁 Project Structure
+📁 Folder Structure
 
 **[databese_creation](./database_creation/):**   Instructions for setting up the PostgreSQL database.
 
