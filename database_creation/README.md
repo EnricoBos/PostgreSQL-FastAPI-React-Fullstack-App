@@ -11,12 +11,31 @@ This guide helps you set up a PostgreSQL database in **WSL2 (Ubuntu)** to be use
 
 ## Step 1: Install & Start PostgreSQL in WSL2
 
-```bash
-sudo apt update
-sudo apt install postgresql postgresql-contrib
-sudo service postgresql start
-sudo systemctl enable postgresql
-```
+Start by preparing your WSL2 Ubuntu environment to install and run PostgreSQL.
+
+1. **Update the package list**  
+   Updates the list of available software and versions to make sure you're installing the most current packages:
+   ```bash
+   sudo apt update
+   ```
+
+2. **Install PostgreSQL and useful extensions**  
+   Installs the PostgreSQL server and `postgresql-contrib`, which includes helpful tools and extensions (like `uuid-ossp`, `hstore`, etc.):
+   ```bash
+   sudo apt install postgresql postgresql-contrib
+   ```
+
+3. **Start the PostgreSQL service**  
+   Activates PostgreSQL so it starts running in the background:
+   ```bash
+   sudo service postgresql start
+   ```
+
+4. **Enable PostgreSQL to start on boot**  
+   Ensures PostgreSQL will start automatically every time the system boots:
+   ```bash
+   sudo systemctl enable postgresql
+   ```
 
 ---
 
