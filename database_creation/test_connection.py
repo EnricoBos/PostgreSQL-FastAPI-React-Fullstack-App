@@ -3,7 +3,7 @@
 from sqlalchemy import create_engine
 
 # Replace these with your actual credentials
-db_url = "postgresql://myuser:mypassword@127.0.0.1:5432/mydb"
+db_url = "postgresql://myuser:mypassword@127.0.0.1:5432/mydb" # <- match the port from postgresql.conf
 
 try:
     engine = create_engine(db_url)
