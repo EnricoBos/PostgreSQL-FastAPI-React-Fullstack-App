@@ -19,7 +19,7 @@ The goal of the app is to simulate a background computation workflow. Users can:
 
 All results are stored in a PostgreSQL database and the system is designed to be extended for more advanced data processing.
 
-![App Preview](./app_preview.png)
+![app_task_menager](https://github.com/user-attachments/assets/45231083-ee1d-4ac2-843f-c8baeed294f5)
 
 ---
 
