@@ -100,7 +100,7 @@ sudo service postgresql restart
 1. Open DBeaver and create a new PostgreSQL connection.
 2. Use:
    - Host: `localhost`
-   - Port: `5432`
+   - Port: `5432` # <- match the port from postgresql.conf
    - User: `myuser`
    - Password: `mypassword`
    - Database: `mydb`
@@ -110,10 +110,49 @@ sudo service postgresql restart
 
 ---
 
-## Step 5: Connect to PostgreSQL in Python
+## 🐍 Step 5: Connect to PostgreSQL in Python
 
-Install the libraries:
+To interact with your PostgreSQL database from Python, install the required packages:
 
 ```bash
 pip install sqlalchemy psycopg2
+```
+
+Two example scripts are provided in this folder:
+
+- [`test_connection.py`](./test_connection.py): Checks if your Python script can connect to the PostgreSQL database
+- [`init_tables.py`](./init_tables.py): Creates the required `task` and `data` tables with a foreign key reference
+
+---
+
+### Test the Database Connection
+
+Use `test_connection.py` to verify that your database credentials and host are working:
+
+Run the script:
+
+```bash
+python test_connection.py
+```
+
+---
+
+### Create Tables in PostgreSQL
+
+Once your connection works, use `init_tables.py` to create your database schema:
+
+```bash
+python init_tables.py
+```
+
+This will:
+
+- Create the `task` table with `id`, `username`, and `description`
+- Create the `data` table with `current`, `voltage`, and a foreign key `task_id` referencing `task(id)`
+- Skip table creation if they already exist
+
+You'll see this message if successful:
+
+```
+Tables 'data' and 'task' created successfully, with 'task_id' as a foreign key in 'data'.
 ```
