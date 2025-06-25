@@ -12,7 +12,7 @@ For this guide, we assume:
 
 - **Database Name**: `task`
 - **Host**: `localhost`
-- **Port**: `5444`
+- **Port**: `5432`  # <- match the port from postgresql.conf
 - **Username**: `youruser`
 - **Password**: `yourpassword`
 
