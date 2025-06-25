@@ -68,13 +68,13 @@ For this guide, we assume:
 ```
 project_app/
 ├── backend/
-│   ├── main.py
-│   ├── models.py
-│   ├── database.py
-│   ├── task_logic.py
-│   ├── requirements.txt
-│   ├── Dockerfile.backend
-│   ├── Others.py (TBD)
+│   ├── main.py              ✅ FastAPI app entry point and route definitions
+│   ├── models.py            ✅ SQLAlchemy ORM models for DB tables
+│   ├── database.py          ✅ Database engine and session setup
+│   ├── task_logic.py        ✅ Task creation, deletion, listing logic
+│   ├── requirements.txt     ✅ Python package dependencies
+│   ├── Dockerfile.backend   ✅ Docker config for backend service
+│   ├── Others.py            🚧 Placeholder for extra backend logic (TBD)
 ├── frontend/
 │   ├── src/
 │   │   ├── api.js            ✅ API functions to call FastAPI backend
@@ -83,12 +83,12 @@ project_app/
 │   │   ├── TaskList.js       ✅ Component to list and delete tasks
 │   │   ├── ScatterPlot.js    ✅ Component to create plot
 │   │   ├── HistogramPlot.js  ✅ Component to create plot
-│   │   ├── ScatterPage.js    ✅ Component to create plot
-│   │   ├── HistogramPage.js  ✅ Component to create plot
+│   │   ├── ScatterPage.js    ✅ Page that renders the scatter plot
+│   │   ├── HistogramPage.js  ✅ Page that renders the histogram
 │   │   └── index.js          ✅ React entry point (renders App)
-│   ├── Dockerfile.frontend
-├── docker-compose.yml
-├── package.json              ✅ Contains metadata and dependencies for the React app
+│   ├── Dockerfile.frontend   ✅ Docker config for frontend service
+├── docker-compose.yml        ✅ Launches backend + frontend containers together
+├── package.json              ✅ React app dependencies and metadata
 
 ```
 
