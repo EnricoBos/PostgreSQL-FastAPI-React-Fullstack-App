@@ -1,11 +1,5 @@
 #####################################
-#SQLAlchemy database setup used in a FastAPI project
-# assuming db is the name of the Docker service for your PostgreSQL container, change localhos with db
-# enricotask is the name of database
-# enricotask is the psw to database
-# define an engine di connessione
-# crea un sessione per comunicare con database
-# Base è necessaria per far sì che SQLAlchemy possa mappare i modelli Python alle tabelle del database.
+
 ########################################
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
