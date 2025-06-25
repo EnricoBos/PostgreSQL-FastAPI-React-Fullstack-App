@@ -1,4 +1,26 @@
- FastAPI + React App Setup Guide
+# FastAPI + React App Setup Guide
+
+This app provides a simple end-to-end demonstration of a full-stack system where users can create tasks, trigger background computations, and analyze results.
+
+---
+
+## App Overview
+
+The goal of the app is to simulate a background computation workflow. Users can:
+
+1. Fill in the **task name**, **description**, and select the **number of points to generate**.
+2. Click **"Create Task"** to start the process.
+3. The app marks the task status as **"in progress"**.
+4. Once the simulated calculation (random number generation) completes, the task status updates to **"completed"**.
+5. Additional buttons appear:
+   - **"Delete Task"** – to remove the task
+   - **"Show Plot Task"** – to view results as a **scatter plot** and **histogram**
+
+All results are stored in a PostgreSQL database and the system is designed to be extended for more advanced data processing.
+
+![App Preview](./app_preview.png)
+
+---
 
 This guide explains how to build and run a full-stack app using **FastAPI** for the backend and **React** for the frontend, connected to a PostgreSQL database.
 
@@ -21,6 +43,28 @@ For this guide, we assume:
 ---
 
 ## 📁 Project Structure
+
+### Frontend (React)
+- Text field to enter filter (number of point)
+- Text field to enter task info
+- Buttons to:
+  - Create task
+  - Delete task
+  - Show plots (scatter, histogram)
+- Real-time task list with status (in progress, completed, failed)
+
+### Backend (FastAPI)
+- Tables: `task`, `data`
+- Endpoints:
+  - `POST /task/create`
+  - `GET /task/list`
+  - `DELETE /task/{id}`
+  - `GET /task/{task_id}/data`
+- Background task system to populate the `data` table
+- Docker support for deployment
+
+---
+
 
 ```
 project_app/
@@ -97,28 +141,7 @@ Success! Created frontend at /path/to/your_project/frontend
 
 ---
 
-## App Overview
 
-### Frontend (React)
-- Text field to enter filter (number of point)
-- Text field to enter task info
-- Buttons to:
-  - Create task
-  - Delete task
-  - Show plots (scatter, histogram)
-- Real-time task list with status (in progress, completed, failed)
-
-### Backend (FastAPI)
-- Tables: `task`, `data`
-- Endpoints:
-  - `POST /task/create`
-  - `GET /task/list`
-  - `DELETE /task/{id}`
-  - `GET /task/{task_id}/data`
-- Background task system to populate the `data` table
-- Docker support for deployment
-
----
 
 ## Backend Script Roles
 
