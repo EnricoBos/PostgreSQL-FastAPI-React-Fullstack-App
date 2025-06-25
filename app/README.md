@@ -23,8 +23,6 @@ All results are stored in a PostgreSQL database and the system is designed to be
 
 ---
 
----
-
 ##  Prerequisites
 
 Make sure the PostgreSQL database is already created with the necessary tables and columns.
