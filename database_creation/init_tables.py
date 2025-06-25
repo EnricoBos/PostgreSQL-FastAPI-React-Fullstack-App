@@ -7,7 +7,7 @@ conn = psycopg2.connect(
     user="myuser",
     password="mypassword",  
     host="localhost",
-    port=5432
+    port=5432 # <- match the port from postgresql.conf
 )
 cursor = conn.cursor()
 
