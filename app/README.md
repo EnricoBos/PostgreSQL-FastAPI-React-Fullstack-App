@@ -142,7 +142,7 @@ Success! Created frontend at /path/to/project_app/frontend
 
 ## Application Logic Summary
 
-After setting up both the backend and frontend structure, here’s a breakdown of each file’s purpose. These tables explain the responsibilities of all main components in both the backend and frontend folders, making it easier to navigate and extend the codebase.
+After setting up both the backend and frontend structure, here’s a breakdown of each file’s purpose. These tables explain the responsibilities of all main components in both the backend and frontend folders.
 
 ## Backend Script Roles
 
