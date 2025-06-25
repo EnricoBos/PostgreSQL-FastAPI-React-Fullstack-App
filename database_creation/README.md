@@ -67,7 +67,7 @@ Start by preparing your WSL2 Ubuntu environment to install and run PostgreSQL.
 
 > Replace `16` with your PostgreSQL version.
 
-Edit config files:
+To allow external tools like DBeaver to connect to your database, edit the following configuration files:
 
 ```bash
 sudo nano /etc/postgresql/16/main/postgresql.conf
@@ -77,21 +77,29 @@ sudo nano /etc/postgresql/16/main/postgresql.conf
   ```
   listen_addresses = '*'
   ```
+- (Optional) Change the port number if needed (default is 5432):
+  ```
+  port = 5433  # or another port you prefer
+  ```
+
+Then edit the authentication settings:
 
 ```bash
 sudo nano /etc/postgresql/16/main/pg_hba.conf
 ```
 
-- Add at the end:
+- Add this line at the end of the file to allow remote connections:
   ```
   host    all     all     0.0.0.0/0     md5
   ```
 
-Then restart PostgreSQL:
+Finally, restart PostgreSQL to apply changes:
 
 ```bash
 sudo service postgresql restart
 ```
+
+Make sure to update your Python scripts and database clients (like DBeaver) to use the same port you set above !!.
 
 ---
 
