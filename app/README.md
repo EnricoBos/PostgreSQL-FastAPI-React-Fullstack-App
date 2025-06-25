@@ -53,7 +53,7 @@ For this guide, we assume:
 - Real-time task list with status (in progress, completed, failed)
 
 ### Backend (FastAPI)
-- Tables: `task`, `data`
+- Database Tables: `task`, `data`
 - Endpoints:
   - `POST /task/create`
   - `GET /task/list`
