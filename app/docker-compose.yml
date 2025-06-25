@@ -26,9 +26,9 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_DB: task
-      POSTGRES_USER: enricotask
-      POSTGRES_PASSWORD: enricotask
+      POSTGRES_DB: dbname
+      POSTGRES_USER: your_user
+      POSTGRES_PASSWORD: your_psw
     ports:
       - "5444:5432"
     volumes:
