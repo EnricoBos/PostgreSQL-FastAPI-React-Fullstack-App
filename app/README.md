@@ -54,8 +54,8 @@ project_app/
 ## Step 0: Create the Main Project Folder
 
 ```bash
-mkdir your_project
-cd your_project
+mkdir project_app
+cd project_app
 ```
 
 ---
