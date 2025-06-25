@@ -1,5 +1,6 @@
 # FastAPI + React App Setup Guide
 
+This guide explains how to build and run a full-stack app using **FastAPI** for the backend and **React** for the frontend, connected to a PostgreSQL database.
 This app provides a simple end-to-end demonstration of a full-stack system where users can create tasks, trigger background computations, and analyze results.
 
 ---
@@ -21,8 +22,6 @@ All results are stored in a PostgreSQL database and the system is designed to be
 ![App Preview](./app_preview.png)
 
 ---
-
-This guide explains how to build and run a full-stack app using **FastAPI** for the backend and **React** for the frontend, connected to a PostgreSQL database.
 
 ---
 
