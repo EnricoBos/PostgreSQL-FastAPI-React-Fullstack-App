@@ -63,7 +63,7 @@ Start by preparing your WSL2 Ubuntu environment to install and run PostgreSQL.
 
 ---
 
-## Step 3: Allow External Connections (Optional for Tools like DBeaver)
+## Step 3: Allow External Connections (for Tools like DBeaver)
 
 > Replace `16` with your PostgreSQL version.
 
@@ -95,7 +95,7 @@ sudo service postgresql restart
 
 ---
 
-## Step 4: Connect Using DBeaver (Optional)
+## Step 4: Connect Using DBeaver (test connection)
 
 1. Open DBeaver and create a new PostgreSQL connection.
 2. Use:
@@ -104,7 +104,9 @@ sudo service postgresql restart
    - User: `myuser`
    - Password: `mypassword`
    - Database: `mydb`
-3. Test and save the connection.
+3. Test Connection
+   Click "Test Connection" to verify the connection settings. If successful, click "Finish".
+
 
 ---
 
