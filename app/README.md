@@ -21,7 +21,8 @@ All results are stored in a PostgreSQL database and the system is designed to be
 
 The following image shows the **task manager** part of the app interface. Here, users can view all created tasks, monitor their status, and actions like deleting or visualizing task data.
 
-![app_task_menager](https://github.com/user-attachments/assets/45231083-ee1d-4ac2-843f-c8baeed294f5)
+![app_task_menager](https://github.com/user-attachments/assets/9d0b2987-4618-4a09-b20f-748b308e7af3)
+
 ---
 
 ##  Prerequisites
