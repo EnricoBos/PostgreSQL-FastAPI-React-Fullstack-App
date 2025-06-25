@@ -12,9 +12,9 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.exc import OperationalError 
 from sqlalchemy import text 
 
-#DATABASE_URL = "postgresql://enricotask:enricotask@localhost:5444/task" ### "postgresql://enricotask:enricotask@localhost:5433/task"
+#DATABASE_URL =
 # Database connection URL: Format -> "postgresql://<user>:<password>@<host>:<port>/<database>"
-DATABASE_URL = "postgresql://enricotask:enricotask@db:5432/task"
+DATABASE_URL = "postgresql://<user>:<password>@<host>:<port>/<database>"
 
 # Create the connection engine that will manage communication with the PostgreSQL database
 engine = create_engine(DATABASE_URL)
