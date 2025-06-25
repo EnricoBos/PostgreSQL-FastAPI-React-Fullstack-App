@@ -44,7 +44,7 @@ For this guide, we assume:
 ## 📁 Project Structure
 
 ### Frontend (React)
-- Text field to enter filter (number of point)
+- Text field to enter filter (number of data points)
 - Text field to enter task info
 - Buttons to:
   - Create task
