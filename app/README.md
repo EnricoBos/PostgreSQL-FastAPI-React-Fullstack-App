@@ -159,5 +159,17 @@ You can create backend boilerplate files using:
 ```bash
 touch main.py database.py schemas.py models.py task_logic.py
 ```
-
 ---
+## Frontend Component Roles
+
+| Component/File     | Purpose                                           | Details |
+|--------------------|---------------------------------------------------|---------|
+| `App.js`           | Entry point; sets up routing and global state     | Uses `BrowserRouter`, `Routes`, and `useState` to manage page navigation and task filters |
+| `api.js`           | Central API communication layer                   | Defines `createTask`, `fetchTasks`, and `deleteTask` with fetch calls to FastAPI backend |
+| `FilterBar.js`     | UI for task parameters                            | Controlled component with input for number of data points; updates `filters` state |
+| `TaskForm.js`      | Submits new task to backend                       | Uses form fields and `createTask()` to send task info and filters |
+| `TaskList.js`      | Displays all tasks and actions                    | Polls backend every 2 seconds, lists tasks, and includes delete and plot buttons |
+| `ScatterPage.js`   | Shows scatter plot for a task                     | Extracts `taskId` via `useParams`, renders `ScatterPlot` component |
+| `HistogramPage.js` | Shows histogram plot for a task                   | Similar to `ScatterPage`, uses `HistogramPlot` for visual output |
+| `ScatterPlot.js`   | Renders the scatter plot visualization            | Accepts `taskId`, fetches related data from backend and renders plot |
+| `HistogramPlot.js` | Renders the histogram visualization               | Same logic as `ScatterPlot.js`, but shows a histogram instead |
