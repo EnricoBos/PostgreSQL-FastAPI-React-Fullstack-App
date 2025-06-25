@@ -110,7 +110,7 @@ sudo service postgresql restart
 
 ---
 
-## 🐍 Step 5: Connect to PostgreSQL in Python
+## Step 5: Connect to PostgreSQL in Python
 
 To interact with your PostgreSQL database from Python, install the required packages:
 
