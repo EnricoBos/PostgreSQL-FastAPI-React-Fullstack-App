@@ -190,7 +190,10 @@ The project includes Docker support for running the full stack locally or in pro
 ### Features:
 - Backend and frontend services are orchestrated with `docker-compose`.
 - Health check is included for the database.
-- Volume mounting enables live development for the backend.
+- Volume mounting is used:
+   - For the backend, to enable live code updates without rebuilding.
+   - For the frontend, to optionally support live development when using a dev server.
+   - For the database, to persist data between restarts via a named volume.
 - Optional alternative Dockerfile included for frontend in case of SSL certificate issues during `npm install`.
 
 ### Usage:
