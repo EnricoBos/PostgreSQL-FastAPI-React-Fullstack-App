@@ -1,6 +1,6 @@
 # PostgreSQL Setup for FastAPI + React App (WSL2)
 
-This guide helps you set up a PostgreSQL database in **WSL2 (Ubuntu)** to be used by the FastAPI + React app. It includes:
+This guide helps to set up a PostgreSQL database in **WSL2 (Ubuntu)** to be used by the FastAPI + React app. It includes:
 
 - PostgreSQL installation and configuration
 - Creating a superuser and database
