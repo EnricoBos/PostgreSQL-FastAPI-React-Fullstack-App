@@ -175,3 +175,33 @@ touch main.py database.py schemas.py models.py task_logic.py
 | `HistogramPage.js` | Shows histogram plot for a task                   | Similar to `ScatterPage`, uses `HistogramPlot` for visual output |
 | `ScatterPlot.js`   | Renders the scatter plot visualization            | Accepts `taskId`, fetches related data from backend and renders plot |
 | `HistogramPlot.js` | Renders the histogram visualization               | Same logic as `ScatterPlot.js`, but shows a histogram instead |
+
+
+---
+## Docker Integration
+
+The project includes Docker support for running the full stack locally or in production.
+
+### Components:
+1. **Backend** – Containerized with `Dockerfile.backend`, running FastAPI and PostgreSQL client.
+2. **Frontend** – Built and served using `Dockerfile.frontend`, which compiles the React app and serves it with Nginx.
+3. **Database** – A PostgreSQL container managed in the `docker-compose.yml`.
+
+### Features:
+- Backend and frontend services are orchestrated with `docker-compose`.
+- Health check is included for the database.
+- Volume mounting enables live development for the backend.
+- Optional alternative Dockerfile included for frontend in case of SSL certificate issues during `npm install`.
+
+### Usage:
+- `docker-compose up --build`: Build and start all services.
+- `docker-compose down`: Stop all services.
+- `docker volume rm enrico_app_pgdata`: (Optional) Remove database volume to reset DB.
+- `docker-compose logs -f`: View real-time logs of all services.
+
+### Development Notes:
+- For development, volume mounts allow code changes without rebuilding.
+- For production, remove volume mounts and rebuild images before deployment.
+- Use a `.env` file to manage environment variables and secrets.
+
+
