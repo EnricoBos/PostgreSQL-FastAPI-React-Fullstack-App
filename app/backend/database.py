@@ -14,7 +14,7 @@ from sqlalchemy import text
 
 #DATABASE_URL =
 # Database connection URL: Format -> "postgresql://<user>:<password>@<host>:<port>/<database>"
-DATABASE_URL = "postgresql://<user>:<password>@<host>:<port>/<database>"
+DATABASE_URL = "postgresql://<user>:<password>@<host>:<port>/<database>"  ### set your psw and db name!!
 
 # Create the connection engine that will manage communication with the PostgreSQL database
 engine = create_engine(DATABASE_URL)
