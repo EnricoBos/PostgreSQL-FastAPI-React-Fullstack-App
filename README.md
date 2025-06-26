@@ -1,5 +1,5 @@
 # PostgreSQL-FastAPI-React-Fullstack-App
-This repository contains a full-stack web application using FastAPI as the backend and React as the frontend. The backend is powered by a PostgreSQL database, which you can set up manually following the provided instructions.
+This repository contains a full stack web application using FastAPI as the backend and React as the frontend. The backend is powered by a PostgreSQL database, which you can set up manually following the provided instructions.
 
 The project is split into two main guides:
 
