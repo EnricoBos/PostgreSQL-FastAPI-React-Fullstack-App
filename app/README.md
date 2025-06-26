@@ -156,7 +156,7 @@ After setting up both the backend and frontend structure, here’s a breakdown o
 | `requirements.txt` | List of dependencies |
 | `Dockerfile.backend` | Docker setup for backend |
 
-You can create backend boilerplate files using:
+You can create backend files using (as explained in step 1):
 
 ```bash
 touch main.py database.py schemas.py models.py task_logic.py
