@@ -182,22 +182,13 @@ touch main.py database.py schemas.py models.py task_logic.py
 
 The project includes Docker support for running the full stack locally or in production.
 
-### Components:
+### Components & Features:
 1. **Backend**  – Containerized with Dockerfile.backend, running the FastAPI app with dependencies (requirements.txt).
 2. **Frontend** – Built and served using `Dockerfile.frontend`, which compiles the React app and serves it with Nginx.
-3. **docker-compose.yml** with three services:
+3. **Compose** with three services:
    - Backend – Builds from ./backend using Dockerfile.backend, exposes port 8000, mounts the source code as a volume for live development, and waits for the database to become healthy before starting.
    - Frontend – Builds from ./frontend using Dockerfile.frontend, exposes the React app on port 3000, and mounts the local source for development purposes.
    - Database (PostgreSQL) – Uses the official postgres:15 image, initializes with configured database name, user, and password. A named volume (pgdata) ensures data persistence. Includes a health check to signal readiness    to dependent services.
-
-### Features:
-- Backend and frontend services are orchestrated with `docker-compose`.
-- Health check is included for the database.
-- Volume mounting is used:
-   - For the backend, to enable live code updates without rebuilding.
-   - For the frontend, to optionally support live development when using a dev server.
-   - For the database, to persist data between restarts via a named volume.
-- Optional alternative Dockerfile included for frontend in case of SSL certificate issues during `npm install`.
 
 ### Usage:
 - `docker-compose up --build`: Build and start all services.
