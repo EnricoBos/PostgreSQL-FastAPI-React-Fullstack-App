@@ -31,7 +31,7 @@ Make sure the PostgreSQL database is already created with the necessary tables a
 
 For this guide, we assume:
 
-- **Database Name**: `task`
+- **Database Name**: `task` # <- or 'yourdbname'
 - **Host**: `localhost`
 - **Port**: `5432`  # <- match the port from postgresql.conf
 - **Username**: `youruser`
@@ -183,9 +183,12 @@ touch main.py database.py schemas.py models.py task_logic.py
 The project includes Docker support for running the full stack locally or in production.
 
 ### Components:
-1. **Backend** – Containerized with `Dockerfile.backend`, running FastAPI and PostgreSQL client.
+1. **Backend**  – Containerized with Dockerfile.backend, running the FastAPI app with dependencies (requirements.txt).
 2. **Frontend** – Built and served using `Dockerfile.frontend`, which compiles the React app and serves it with Nginx.
-3. **Database** – A PostgreSQL container managed in the `docker-compose.yml`.
+3. **docker-compose.yml** with three services:
+   - Backend – Builds from ./backend using Dockerfile.backend, exposes port 8000, mounts the source code as a volume for live development, and waits for the database to become healthy before starting.
+   - Frontend – Builds from ./frontend using Dockerfile.frontend, exposes the React app on port 3000, and mounts the local source for development purposes.
+   - Database (PostgreSQL) – Uses the official postgres:15 image, initializes with configured database name, user, and password. A named volume (pgdata) ensures data persistence. Includes a health check to signal readiness    to dependent services.
 
 ### Features:
 - Backend and frontend services are orchestrated with `docker-compose`.
@@ -199,7 +202,7 @@ The project includes Docker support for running the full stack locally or in pro
 ### Usage:
 - `docker-compose up --build`: Build and start all services.
 - `docker-compose down`: Stop all services.
-- `docker volume rm enrico_app_pgdata`: (Optional) Remove database volume to reset DB.
+- `docker volume rm project_app_pgdata`: (Optional) Remove database volume to reset DB.
 - `docker-compose logs -f`: View real-time logs of all services.
 
 ### Development Notes:
